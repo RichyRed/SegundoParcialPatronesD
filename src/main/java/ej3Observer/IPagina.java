@@ -1,9 +1,7 @@
 package ej3Observer;
 
-import structures.observer.IObserver;
-
 public interface IPagina {
-    void attach(IObserver observer);
-    void detach(IObserver observer);
-    void notifyObservers(String msg);
+    void attach(IUser observer);
+    void detach(IUser observer);
+    void notifyObservers(Notificaciones notificaciones);
 }

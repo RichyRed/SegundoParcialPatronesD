@@ -3,11 +3,13 @@ package ej3Observer;
 public class Notificaciones {
     private String publicacionesDeVideos;
     private String imagenes;
+    private String elementos;
 
 
     public Notificaciones(String publicacionesDeVideos, String imagenes) {
         this.publicacionesDeVideos = publicacionesDeVideos;
         this.imagenes = imagenes;
+        this.elementos = elementos;
     }
 
     public String getPublicacionesDeVideos() {
@@ -24,6 +26,14 @@ public class Notificaciones {
 
     public void setImagenes(String imagenes) {
         this.imagenes = imagenes;
+    }
+
+    public String getElementos() {
+        return elementos;
+    }
+
+    public void setElementos(String elementos) {
+        this.elementos = elementos;
     }
 
     public void showInfo(){

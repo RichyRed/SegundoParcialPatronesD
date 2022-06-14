@@ -27,7 +27,7 @@ public class UserPagina implements  IUser{
     }
 
     @Override
-    public String getPreferenciaNotificaciones(){
+    public String getPreferenciasNotificaciones(){
         return elementos;
     }
 

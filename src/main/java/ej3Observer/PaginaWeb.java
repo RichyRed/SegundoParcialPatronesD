@@ -5,15 +5,16 @@ import structures.observer.IObserver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PaginaWeb implements IPagina{
+public class PaginaWeb implements IPagina {
     private List<Notificaciones> notificacionesList = new ArrayList<>();
     private List<IUser> users = new ArrayList<>();
 
-    public PaginaWeb(){}
+    public PaginaWeb() {
+    }
 
-    public void noti(Notificaciones notificaciones){
-         notificacionesList.add(notificaciones);
-         notifyObservers(notificaciones);
+    public void noti(Notificaciones notificaciones) {
+        notificacionesList.add(notificaciones);
+        notifyObservers(notificaciones);
     }
 
     @Override
@@ -27,9 +28,15 @@ public class PaginaWeb implements IPagina{
 
     }
 
-
     @Override
-    public void notifyObservers(String msg) {
+    public void notifyObservers(Notificaciones notificaciones) {
+        for (IUser user : users) {
+            if (user.getPreferenciasNotificaciones().equals(notificaciones.getElementos())) {
+                user.update("tienes nuevas notis!!", notificaciones);
+            } else {
+                user.update2("Nuevas notificaciones!!", notificaciones);
+            }
 
+        }
     }
 }
