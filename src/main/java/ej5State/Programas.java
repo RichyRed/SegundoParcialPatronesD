@@ -9,8 +9,9 @@ public class Programas {
         return programasUtilizados;
     }
 
-    public void setProgramasUtilizados(String programasUtilizados) {
+    public Programas setProgramasUtilizados(String programasUtilizados) {
         this.programasUtilizados = programasUtilizados;
+        return this;
     }
 
     public void showInfo(){

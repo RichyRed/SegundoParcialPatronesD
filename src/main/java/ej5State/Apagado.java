@@ -1,12 +1,13 @@
 package ej5State;
 
-public class Reinicio implements IStateCompu{
+public class Apagado implements IStateCompu {
+
+
     @Override
     public void resourceManager(Computadora computadora) throws InterruptedException {
-        System.out.println("\n <<< REINICIANDO :) >>> \n");
+        System.out.println("\n <<< APAGANDO... >>> \n");
         computadora.getMemoriaRam().setCapacidadUtilizada(0);
         computadora.getCpu().setCapacidadUtilizada(0);
-        computadora.getProgramas().setProgramasUtilizados("Cerrando programas, ninguno estara disponible");
         computadora.getMemoriaRam().showInfo();
         computadora.getCpu().showInfo();
         computadora.getProgramas().showInfo();

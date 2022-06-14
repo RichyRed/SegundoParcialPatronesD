@@ -12,6 +12,10 @@ public abstract class Persona {
         this.nombre = nombre;
     }
 
+    public Persona(IChatDeJuegos chatDeJuegos){
+        this.chatDeJuegos = chatDeJuegos;
+    }
+
     public IChatDeJuegos getChatDeJuegos() {
         return chatDeJuegos;
     }
