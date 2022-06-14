@@ -3,7 +3,7 @@ package ej5State;
 public class CPU {
     private String capacidadTotal;
     private double capacidadUtilizada;
-    private String description;
+    private String descripcion;
 
     public CPU(){}
 
@@ -11,30 +11,33 @@ public class CPU {
         return capacidadTotal;
     }
 
-    public void setCapacidadTotal(String capacidadTotal) {
+    public CPU setCapacidadTotal(String capacidadTotal) {
         this.capacidadTotal = capacidadTotal;
+        return this;
     }
 
     public double getCapacidadUtilizada() {
         return capacidadUtilizada;
     }
 
-    public void setCapacidadUtilizada(double capacidadUtilizada) {
+    public CPU setCapacidadUtilizada(double capacidadUtilizada) {
         this.capacidadUtilizada = capacidadUtilizada;
+        return this;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public CPU setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+        return this;
     }
 
     public void showInfo(){
-        System.out.println("\n ******* CPU *******");
-        System.out.println("Capacidad total: " + capacidadTotal);
-        System.out.println("Capacidad utilizada: " + capacidadUtilizada);
-        System.out.println("Descripcion: " + description);
+        System.out.println("\n---- INFO CPU ----\n");
+        System.out.println("Capacidad Total: " + capacidadTotal);
+        System.out.println("Capacidad Utilizada: " + capacidadUtilizada);
+        System.out.println("Descripcion: " + descripcion);
     }
 }
